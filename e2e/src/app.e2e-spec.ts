@@ -9,7 +9,9 @@ describe('workspace-project App', () => {
   });
 
   it('should display welcome message', () => {
+    console.log('page navigate to');
     page.navigateTo();
+    console.log('check expectation');
     expect(page.getTitleText()).toEqual('todo app is running!');
   });
 

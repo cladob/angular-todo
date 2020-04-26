@@ -1,0 +1,10 @@
+<mat-chip-list class="mat-chip-list-stacked" aria-orientation="vertical" #chipList aria-label="Entries selection">
+  <div class="todo-list">
+    <mat-chip *ngFor="let entry of todoList.entries" [selectable]="selectable"
+             [removable]="removable" (removed)="remove(entry)">
+      <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+      &nbsp;
+      {{entry.description}}
+    </mat-chip>
+  </div>
+</mat-chip-list>
